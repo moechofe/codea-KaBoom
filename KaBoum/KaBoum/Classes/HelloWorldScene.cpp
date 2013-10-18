@@ -59,23 +59,9 @@ bool HelloWorld::init()
 		size = CCDirector::sharedDirector()->getVisibleSize();
 		origin = CCDirector::sharedDirector()->getVisibleOrigin();
 
-		/* Close button...
-		CCMenuItemImage* close_item = CCMenuItemImage::create(
-			"CloseNormal.png", "CloseSelected.png",
-			this,
-			menu_selector(HelloWorld::menuCloseCallback));
-		close_item->setScale(3);
-		close_item->setPosition(ccp(
-			origin.x + size.width - 50,
-			origin.y + size.height - 50));
-		CCMenu* menu = CCMenu::create(close_item, NULL);
-		menu->setPosition(CCPointZero);
-		CC_BREAK_IF(!menu);
-		this->addChild(menu, 1);*/
-
 		// Score label...
 		score_label = CCLabelBMFont::create("00000", "west_england-64.fnt");
-		score_label->setScale(10);
+		score_label->setScale(9);
 		score_label->setColor(score_colors[0]);
 		score_label->setPosition(ccp(
 			origin.x + size.width/2,
@@ -399,17 +385,6 @@ void HelloWorld::playBucketSound()
 	case 6: SimpleAudioEngine::sharedEngine()->playEffect("Bucket-6.wav"); break;
 	}
 }
-
-// }}}
-// {{{ Close, Hangup
-
-/*void HelloWorld::menuCloseCallback(CCObject* sender)
-{
-	CCDirector::sharedDirector()->end();
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-	exit(0);
-#endif
-}*/
 
 // }}}
 // {{{ Touches: move the buckets

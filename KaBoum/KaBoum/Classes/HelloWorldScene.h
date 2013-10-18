@@ -18,8 +18,6 @@ public:
 
 	static CCScene* scene();
 
-	//virtual void menuCloseCallback(CCObject* sender);
-
 	CREATE_FUNC(HelloWorld);
 
 	void ccTouchesBegan(CCSet* touches, CCEvent* event);
@@ -72,7 +70,7 @@ private:
 	float launcher_speeds[9] = {5, 8, 12, 17, 23, 30, 38, 47, 57};
 	float bomb_speeds[9] = {-7, -8, -10, -13, -17, -22, -28, -35, -43};
 	float bombs_delays_min[9] = {1.3, 0.6, 0.4, 0.2, 0.1, 0.08, 0.07, 0.05, 0.03};
-	float bombs_delays_max[9] = {1.8, 1.3, 1.1, 0.9, 0.6, 0.40, 0.20, 0.09, 0.07};
+	float bombs_delays_max[9] = {1.8, 1.1, 0.9, 0.7, 0.6, 0.40, 0.20, 0.09, 0.07};
 
 	void playBucketSound();	
 
